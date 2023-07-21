@@ -32,11 +32,6 @@ const userModel = mongoose.Schema({
     type: Array,
     default: [],
   },
-  documents: {
-    type: Array,
-    default: [],
-    required: [true, 'please provide pdf files']
-  },
   isdoctor: {
     type: Boolean,
     default: false,
