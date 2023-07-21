@@ -4,8 +4,6 @@ import Home from "./components/common/Home";
 import Login from "./components/common/Login";
 import Register from "./components/common/Register";
 import UserHome from "./components/user/UserHome";
-// import PublicRoute  from "./components/common/PublicRoute";
-// import ProtectedRoute from "./components/common/ProtectedRoute";
 import AdminHome from "./components/admin/AdminHome";
 import UserAppointments from "./components/user/UserAppointments";
 
@@ -28,47 +26,6 @@ function App() {
             ) : (
               <Route path="/login" element={<Login />} />
             )}
-            {/* <Route
-              exact
-              path="/"
-              element={
-                <PublicRoute>
-                  <Home />
-                </PublicRoute>
-              }
-            />
-            <Route
-              path="/login"
-              element={
-                <PublicRoute>
-                  <Login />
-                </PublicRoute>
-              }
-            />
-            <Route
-              path="/register"
-              element={
-                <PublicRoute>
-                  <Register />
-                </PublicRoute>
-              }
-            />
-            <Route
-              path="/userhome"
-              element={
-                <ProtectedRoute>
-                  <UserHome />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/adminhome"
-              element={
-                <ProtectedRoute>
-                  <AdminHome />
-                </ProtectedRoute>
-              }
-            /> */}
           </Routes>
         </div>
         <footer className="bg-light text-center text-lg-start">
