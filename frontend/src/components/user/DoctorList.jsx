@@ -14,12 +14,6 @@ const DoctorList = ({ userDoctorId, doctor, userdata }) => {
    const [documentFile, setDocumentFile] = useState(null);
    const [show, setShow] = useState(false);
 
-   const format12Hour = (timeString) => {
-      const [hour, minute] = timeString.split(':');
-      const period = parseInt(hour, 10) >= 12 ? 'PM' : 'AM';
-      const twelveHour = (parseInt(hour, 10) % 12) || 12;
-      return `${twelveHour}:${minute} ${period}`;
-   };
    const currentDate = new Date().toISOString().slice(0, 16);
 
    const handleClose = () => setShow(false);
@@ -114,10 +108,6 @@ const DoctorList = ({ userDoctorId, doctor, userdata }) => {
                                     value={dateTime}
                                     onChange={handleChange}
                                  />
-                                 {/* Display formatted time */}
-                                 {dateTime && (
-                                    <div>Formatted Time: {format12Hour(dateTime)}</div>
-                                 )}
                               </Form.Group>
 
                               <Form.Group controlId="formFileSm" className="mb-3">
