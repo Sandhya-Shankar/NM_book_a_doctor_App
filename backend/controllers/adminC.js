@@ -101,12 +101,6 @@ const getStatusRejectController = async (req, res) => {
 const displayAllAppointmentController = async (req, res) => {
   try {
     const allAppointments = await appointmentSchema.find();
-    // if (!allAppointments) {
-    //   return res.status(201).send({
-    //     message: "No appointments found",
-    //     sucess: false,
-    //   });
-    // } else {
       return res.status(200).send({
         success: true,
         message: "successfully fetched All Appointments ",
