@@ -133,42 +133,6 @@ const UserAppointments = () => {
       message.error('Something went wrong');
     }
   };
-
-  // const handleDownload = async (url,appointId) => {
-  //   // console.log(url, appointId)
-  //   try {
-  //     const res = await axios.get('http://localhost:8001/api/doctor/getdocumentdownload', {
-  //       headers: {
-  //         'Authorization': `Bearer ${localStorage.getItem("token")}`,
-  //       },
-  //       params: { appointId },
-  //       responseType: 'blob'
-  //     })
-
-
-  //     if (res.data.success) {
-  //       let urlCreator = window.URL || window.webkitURL;
-  //       var downloadLink = document.createElement("a");
-  //       document.body.appendChild(downloadLink);
-  //       downloadLink.setAttribute("href", urlCreator.createObjectURL(new Blob([res.data
-  //       ], { "type": "application/pdf" })));
-  //       //set the file name here you want to give for your pdf
-  //       downloadLink.setAttribute("download", "Document" + url + ".pdf");
-  //       downloadLink.style.display = "none";
-  //       downloadLink.click()
-  //       alert("Your Document is Downloaded Successfully!")
-  //     }
-  //     else {
-  //       message.error(res.data.error)
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //     message.error('Something went wrong');
-  //   }
-  // }
-
-
-
   return (
     <div>
       <h2 className='p-3 text-center'>All Appointments</h2>
@@ -243,8 +207,6 @@ const UserAppointments = () => {
             </tbody>
           </Table>
         )}
-
-
       </Container>
     </div>
   );
