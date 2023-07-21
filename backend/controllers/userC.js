@@ -179,39 +179,6 @@ const deleteallnotificationController = async (req, res) => {
   }
 };
 
-// const addDocsController = async (req, res) => {
-//   const userId = req.query.userId;
-//   const image = req.file;
-
-//   try {
-//     const user = await userSchema.findOne({ _id: userId });
-
-//     if (!user) {
-//       return res
-//         .status(404)
-//         .send({ message: "User not found", success: false });
-//     }
-
-//     user.documents.push({
-//       name: image.filename,
-//       url: image.path,
-//     });
-
-//     await user.save();
-
-//     return res.status(200).send({
-//       message: "Image added successfully",
-//       success: true,
-//       data: user,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//     res
-//       .status(500)
-//       .send({ message: "Unable to add image", success: false, error });
-//   }
-// };
-
 ////displaying all doctors in user profile
 const getAllDoctorsControllers = async (req, res) => {
   try {
@@ -350,7 +317,6 @@ module.exports = {
   docController,
   getallnotificationController,
   deleteallnotificationController,
-  // addDocsController,
   getAllDoctorsControllers,
   appointmentController,
   getAllUserAppointments,
