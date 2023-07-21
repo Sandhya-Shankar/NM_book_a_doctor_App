@@ -8,7 +8,6 @@ const {
   docController,
   deleteallnotificationController,
   getallnotificationController,
-  addDocsController,
   getAllDoctorsControllers,
   appointmentController,
   getAllUserAppointments,
@@ -46,13 +45,6 @@ router.post(
 );
 
 router.get("/getuserappointments", authMiddleware, getAllUserAppointments);
-
-// router.post(
-//   "/adddocs",
-//   upload.single("image"),
-//   authMiddleware,
-//   addDocsController
-// );
 
 router.get("/getDocsforuser", authMiddleware, getDocsController)
 
