@@ -60,9 +60,6 @@ const AdminHome = () => {
                      <h2>MediCareBook</h2>
                   </div>
                   <div className="menu">
-                     {/* <div className={`menu-items ${activeMenuItem === 'appointments' ? 'active' : ''}`} onClick={() => handleMenuItemClick('appointments')}>
-                        <HomeIcon className='icon' /><Link>Appointments</Link>
-                     </div> */}
                      <div className={`menu-items ${activeMenuItem === 'adminusers' ? 'active' : ''}`} onClick={() => handleMenuItemClick('adminusers')}>
                         <CalendarMonthIcon className='icon' /><Link>Users</Link>
                      </div>
