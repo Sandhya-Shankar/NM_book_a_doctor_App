@@ -27,6 +27,5 @@ An intuitive web application built using the MERN (MongoDB, Express.js, React.js
 - **Libraries**: Axios, Ant Design, React-Bootstrap, MDB React UI Kit  
 - **State Management**: Context API  
 
-
-Replace placeholder text like **your-username**, **your.email@example.com**, and **link-to-screenshot** with actual data relevant to your project. Let me know if you need further customizations!
+E mail - ID: mshanthapriya@gmail.com
 By: Shantha priya.M (202115100), Nithya sree.K(202115071), CEG, Anna University students
