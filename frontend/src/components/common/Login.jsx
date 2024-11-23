@@ -31,37 +31,34 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8001/api/user/login", user);
+      const res = await axios.post("http://localhost:3000/api/user/login", user);
       if (res.data.success) {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('userData', JSON.stringify(res.data.userData));
         message.success('Login successfully');
         const isLoggedIn = JSON.parse(localStorage.getItem("userData"));
-        const { type } = isLoggedIn
-        
+        const { type } = isLoggedIn;
+  
         switch (type) {
           case "admin":
-            navigate("/adminHome")
+            navigate("/adminHome");
             break;
           case "user":
-            navigate("/userhome")
+            navigate("/userhome");
             break;
-
           default:
-            navigate("/Login")
+            navigate("/Login");
             break;
         }
-      }
-      else{
-        message.error(res.data.message)
+      } else {
+        message.error(res.data.message);
       }
     } catch (error) {
-      console.log(error);
-      message.error('Something went wrong')
-
+      console.error(error.response?.data || error.message);
+      message.error('Something went wrong');
     }
   };
-
+  
 
   return (
     <>

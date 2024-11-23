@@ -10,7 +10,7 @@ const AdminAppointments = () => {
 
    const getAppointments = async () => {
       try {
-         const res = await axios.get('http://localhost:8001/api/admin/getallAppointmentsAdmin', {
+         const res = await axios.get('http://localhost:3000/api/admin/getallAppointmentsAdmin', {
             headers: {
                Authorization: `Bearer ${localStorage.getItem('token')}`
             },

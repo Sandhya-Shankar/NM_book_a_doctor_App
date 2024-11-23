@@ -12,7 +12,7 @@ const AdminDoctors = () => {
 
    const getDoctors = async () => {
       try {
-         const res = await axios.get('http://localhost:8001/api/admin/getalldoctors', {
+         const res = await axios.get('http://localhost:3000/api/admin/getalldoctors', {
             headers: {
                Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -29,7 +29,7 @@ const AdminDoctors = () => {
    const handleApprove = async (doctorId, status, userid) => {
       console.log(doctorId, status, userid)
       try {
-         const res = await axios.post('http://localhost:8001/api/admin/getapprove', { doctorId, status, userid }, {
+         const res = await axios.post('http://localhost:3000/api/admin/getapprove', { doctorId, status, userid }, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -48,7 +48,7 @@ const AdminDoctors = () => {
    const handleReject = async (doctorId, status, userid) => {
       console.log(doctorId, status, userid)
       try {
-         const res = await axios.post('http://localhost:8001/api/admin/getreject', { doctorId, status, userid }, {
+         const res = await axios.post('http://localhost:3000/api/admin/getreject', { doctorId, status, userid }, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem("token")}`,
             },

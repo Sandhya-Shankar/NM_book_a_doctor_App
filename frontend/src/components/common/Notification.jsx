@@ -16,7 +16,7 @@ const Notification = () => {
 
    const handleAllMarkRead = async () => {
       try {
-         const res = await axios.post('http://localhost:8001/api/user/getallnotification', { userId: user._id }, {
+         const res = await axios.post('http://localhost:3000/api/user/getallnotification', { userId: user._id }, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem('token')}`,
             },
@@ -38,7 +38,7 @@ const Notification = () => {
    }
    const handledeleteAllMark = async () => {
       try {
-         const res = await axios.post('http://localhost:8001/api/user/deleteallnotification', { userId: user._id }, {
+         const res = await axios.post('http://localhost:3000/api/user/deleteallnotification', { userId: user._id }, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem('token')}`,
             },
