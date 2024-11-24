@@ -28,4 +28,4 @@ An intuitive web application built using the MERN (MongoDB, Express.js, React.js
 - **State Management**: Context API  
 
 E mail - ID: mshanthapriya@gmail.com
-By: Shantha priya.M (202115100), Nithya sree.K(202115071), CEG, Anna University students
+By: Shantha priya.M (202115100), Nithya sree.K(202115071), Sandhya Shankar(2021115090), Sabari Srinath (2021115335) CEG, Anna University students
